@@ -36,9 +36,12 @@ while True:
     if password != confirm_password:
         print("Password do not match!")
         continue
+    print("✅ Password match!")
 
-    if password == confirm_password:
-        print("Password match!")
+    is_valid, message = if_valid_password(password)
+    if not is_valid:
+        print("❌", message)
+        continue
 
     print("✅ Password confirmed and accepted.")
     break
