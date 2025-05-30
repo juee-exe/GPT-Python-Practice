@@ -33,16 +33,19 @@ while True:
     password = input("Enter your password: ")
     confirm_password = input("Confirm your password: ")
 
+    # Testing password are matching or not
     if password != confirm_password:
         print("Password do not match!")
         continue
     print("✅ Password match!")
 
+    # Testing password is valid or not.
     is_valid, message = if_valid_password(password)
     if not is_valid:
         print("❌", message)
         continue
-
+    
+    # Stop if password is correct.
     print("✅ Password confirmed and accepted.")
     break
     
